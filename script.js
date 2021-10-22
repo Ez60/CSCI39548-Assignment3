@@ -107,5 +107,16 @@ function clearAll(){
 }
 
 function fillU(){
+    const grid1 = document.querySelector("#grid");
+    for (let row of grid1.rows)
+    {
+        for (let col of row.cells)
+        {
+            if (col.style.backgroundColor === "" || col.style.backgroundColor === "white")
+            {
+                col.style.backgroundColor = colorSelected;
+            }
+        }
+    }
     alert("Clicked Fill All Uncolored")
 }
