@@ -23,6 +23,20 @@ function addR() {
 
 //Add a column
 function addC() {
+    const grid1 = document.querySelector("#grid");
+    if (numRows === 0)
+    {
+        const rowAdd = document.createElement("tr");
+        grid1.appendChild(rowAdd);
+        numRows++;
+    }
+    for (let row of grid.rows)
+    {
+        const tdAdd = document.createElement("td");
+        tdAdd.innerHTML = "td";
+        row.appendChild(tdAdd);
+    }
+    numCols++;
     alert("Clicked Add Col")
 }
 
