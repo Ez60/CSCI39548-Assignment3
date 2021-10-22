@@ -42,8 +42,20 @@ function addC() {
 
 //Remove a row
 function removeR() {
+    const grid1 = document.querySelector("#grid");
+    if (numRows > 0)
+    {
+        if (numRows === 1)
+        {
+            numCols = 0;
+        }
+        const rowDelete = grid1.lastElementChild;
+        grid1.removeChild(rowDelete);
+        numRows--;
+    }
     alert("Clicked Remove Row")
 }
+
 //Remove a column
 function removeC() {
     alert("Clicked Remove Col")
