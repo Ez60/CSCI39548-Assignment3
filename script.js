@@ -83,6 +83,14 @@ function selected(){
 }
 
 function fill(){
+    const grid1 = document.querySelector("#grid");
+    for (let row of grid1.rows)
+    {
+        for (let col of row.cells)
+        {
+            col.style.backgroundColor = colorSelected;
+        }
+    }
     alert("Clicked Fill All")
 }
 
