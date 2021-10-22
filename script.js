@@ -58,8 +58,24 @@ function removeR() {
 
 //Remove a column
 function removeC() {
+    const grid1 = document.querySelector("#grid");
+    if (numCols > 0)
+    {
+        for (let i = 0; i < numRows; i++)
+        {
+            const rowColDelete = grid1.rows[i];
+            rowColDelete.deleteCell(rowColDelete.cells.length - 1);
+        }
+        numCols--;
+    }
+    if (numCols === 0)
+    {
+        numRows = 0;
+        grid1.innerHtml = "";
+    }
     alert("Clicked Remove Col")
 }
+
 //sets global var for selected color
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
